@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('./partials/head') %>
+</head>
+
+<body>
+    <%- include('./partials/header') %>
+        <main class="mt-5 pt-4">
+            <div class="container wow fadeIn animated">
+                <h2 class="mt-5 mb-3 h2 text-center"> Resumen de compra</h2>
+                <div class="card my-5">
+                    <div class="card-body">
+                        <table class="table table-responsive-md mb-0">
+                            <thead>
+                                <tr>
+                                    <th style="width: 50px;">
+                                        <strong>#</strong>
+                                    </th>
+                                    <th class="th-lg">
+                                        <strong>Producto</strong>
+                                    </th>
+                                    <th class="th-lg ">
+                                        <strong>Precio</strong>
+                                    </th>
+                                    <th class="text-center">
+                                        <strong>Cantidad</strong>
+                                    </th>
+                                    <th class="text-center">
+                                        <strong>Subtotal</strong>
+                                    </th>
+                                    <th style="width: 50px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="cartRows">
+                            </tbody>
+                        </table>
+                        <div class="card-footer text-right">
+                            <h2>Total: <span class="totalAmount">$ 0</span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-header text-center">
+                        Terminar la compra
+                    </div>
+                    <form class="card-body" id="checkoutCart">
+                        <div class="row">
+                            <div class=" col-md-6 mb-4">
+                                <label for="country">Elegí la forma de entrega</label>
+                                <select class="custom-select d-block w-100" id="shippingMethod" name=" shippingMethod"
+                                    required="">
+                                    <option value="Punto de entrega">Retirar en un punto de entrega</option>
+                                    <option value="Correo Argentino">Correo Argentino</option>
+                                    <option value="Andreani">Andreani</option>
+                                    <option value="Cadetería Privada">Cadetería Privada</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Elegí la forma de entrega
+                                </div>
+
+                            </div>
+                            <div class=" col-md-6 mb-4">
+                                <label for="country">¿Cómo querés pagar?</label>
+                                <select class="custom-select d-block w-100" id="paymentMethod" name="paymentMethod"
+                                    required="">
+                                    <option value="Mercado Pago">Con Mercado Pago</option>
+                                    <option value="Débito o Crédito">Con débito o crédito</option>
+                                    <option value="Otras formas de pago">Con otras formas de pago</option>
+                                </select>
+                                <div class="invalid-feedback">
+                                    Elegí la forma de pago
+                                </div>
+
+                            </div>
+                        </div>
+                        <button class="btn btn-primary btn-lg btn-block waves-effect waves-light"
+                            type="submit">Comprar</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+        <%- include('./partials/footer') %>
+            <%- include('./partials/scripts') %>
+                <script src="/js/cart.js"></script>
+</body>
+
+</html>
