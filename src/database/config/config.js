@@ -18,7 +18,7 @@ module.exports = {
     username: process.env.DB_USER,
     password: process.env.DB_PASS,
     database: process.env.DB_NAME,
-    host: "monorail.proxy.rlwy.net:50262",
+    host: process.env.DB_HOST,
     dialect: "mysql",
   },
 };
